@@ -1,0 +1,66 @@
+@import "../../App.scss";
+.authContainer{
+    margin: auto;
+    // border: 1px solid lightgray;
+    width: 700px;
+    height: 650px;
+    border-radius: 5%;
+    @include mobile{
+        width: 350px;
+        height: 300px;
+    }
+
+    .form{
+        h1{
+            margin-top: 50px;
+            text-align: center;
+        }
+        display: flex;
+        flex-direction: column;
+
+        .nameComponent,
+        .numberComponent,
+        .dobComponent,
+        .emailComponent,
+        .passwordComponent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px 60px 5px 60px;
+
+            input{
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                @include mobile{
+                    padding: 2px;
+                }
+            }
+        }
+        span{
+            color: red;
+            font-size: 15px;
+        }
+        button{
+            padding: 20px;
+            width: 150px;
+            cursor: pointer;
+            margin-left: 250px;
+            margin-top: 20px;
+            border: none;
+            transition: background-color 0.5s ease;
+
+            @include mobile{
+                margin-left: 100px;
+            }
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        button:hover:not(:disabled) {
+            background-color: rgb(124, 211, 211);
+          }
+    }
+}
